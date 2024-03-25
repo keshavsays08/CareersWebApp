@@ -1,5 +1,5 @@
 # from module flask import class Flask 
-from flask import Flask
+from flask import Flask, render_template
 
 # app is nothing but the object of the class Flask
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-  return "Hello World again"
+  return render_template('index.html')
 # when you create a route you require a decorator which is @app.route("/")
 
 

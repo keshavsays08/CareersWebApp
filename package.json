@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx tailwindcss -i ./static/input/input.css -o ./static/output/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@iconify/tailwind": "^0.1.4"
   }
 }

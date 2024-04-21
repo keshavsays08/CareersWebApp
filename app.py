@@ -1,16 +1,47 @@
 # from module flask import class Flask 
-from flask import Flask, render_template
+from flask import Flask, render_template,jsonify
 
 # app is nothing but the object of the class Flask
 app = Flask(__name__)
 # when you create a flask app or instantiate Flask class you require a name of variable here it is __name__
 
+JOBS = [
+  {
+    'id':1,
+    'title': 'Data Analyst',
+    'location':'Bangaluru, IN',
+    'salary':'$70,000'
+  },
+  {
+    'id':1,
+    'title': 'Data Scientist',
+    'location':'Delhi, IN',
+    'salary':'$120,000'
+  },
+  {
+    'id':1,
+    'title': 'Data Engineer',
+    'location':'Remote',
+    'salary':'$95,000'
+  },
+  {
+    'id':1,
+    'title': 'Full Stack Engineer',
+    'location':'San Francisco, USA',
+    'salary':'$120,000'
+  },
+]
+
 @app.route("/")
 def hello_world():
-  return render_template('index.html')
+  return render_template('index.html',
+                         jobs=JOBS)
 # when you create a route you require a decorator which is @app.route("/")
 
-
+# created a json doc
+@app.route("/api/jobs")
+def jobs_json_api():
+  return jsonify(JOBS)
 
 # 2nd way of running the flask web-app
 # if this script is invoked it will the flask web-app

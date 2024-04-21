@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Datalogify Careers</title>
-    </head>
-    <body>
-        <div>
-            Hey there app.py is now connected with home.html
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalogify Careers</title>
+    <link rel="stylesheet" href="/static/output/output.css">
+    </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-slate-200">
+    <div>
+        <!-- hero banner -->
+        <div class="bg-gradient-to-tr from-teal-600 to-slate-400 h-50 w-full bg-cover bg-center relative">
+            <img src="../static/annie-spratt-QckxruozjRg-unsplash.jpg" alt="banner"
+                class="w-full h-full object-cover absolute mix-blend-overlay">
+            <div class="p-24">
+                <h1 class="text-slate-50 text-3xl text-left font-bold">Datalogify Careers</h1>
+                <p class="text-slate-50 text-lg text-left font-normal">Join Our Team Explore Exciting Career
+                    Opportunities with Datalogify!</p>
+            </div>
         </div>
-    </body>
+
+        <div class="mx-10 my-5">
+            <h1 class="text-slate-700 text-3xl text-center font-bold">About Datalogify</h1>
+            <p  class="text-slate-600 text-lg text-justify font-normal" >
+                Hey there! Welcome to our data science community! We’re all about learning and having fun with data stuff. Whether you’re just starting out or you’re already a pro, we’re here to help each other out.
+                
+                Come join us and let’s learn and grow together. It’s gonna be awesome!
+                Go to official about page <a href="https://datalogify.com/about/" target="_blank" class="bg-teal-800 px-3 py-1 cursor-pointer text-gray-50 hover:bg-black hover:text-white rounded-md">About Us</a>
+            </p>
+        </div>
+
+        <div>
+            <h1 class="text-slate-700 text-3xl text-center font-bold">Open Positions</h1>
+            {% for job in jobs %}
+            {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+
+        <!-- hero banner-2  -->
+        <div class="h-50">
+            <h1 class="text-2xl text-left font-bold ">Come build a platform for data enthusiats</h1>
+
+
+        </div>
+        <!-- footer  -->
+        <footer>
+            <div class="w-full h-1 bg-gradient-to-tr from-teal-600 to-slate-400"></div>
+            <div class="p-10 bg-gray-300 text-gray-950 text-sm">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+                        <div>
+                            <img src="../static/logo.png" alt="logo" width="30" height="30">
+                            <p>Copyright © 2024 Datalogify</p>
+                            <p>All rights reserved</p>
+                            <p class="font-bold">Join us on</p>
+                            <a href="#" class="hover:text-teal-600 mx-1 inline-block pt-1">
+                                <i class="pr-2 fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="hover:text-teal-600 mx-1 inline-block pt-1">
+                                <i class="p-2 fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="hover:text-teal-600 mx-1 inline-block pt-1">
+                                <i class="p-2 fa-brands fa-discord"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <p class="font-bold">Support</p>
+                            <p class="mt-2">Terms of service</p>
+                            <p class="mt-2 mb-2">Privacy policy</p>
+                            <a class="mt-2" href="mailto:hello@datalogify.com"><i
+                                    class="fa-solid fa-envelope hover:text-teal-600 mx-1"></i> hello@datalogify.com</a>
+                        </div>
+                        <div>
+                            <p class="font-bold">Company</p>
+                            <p class="mt-2">Blogs</p>
+                            <p class="mt-2">Contact</p>
+                            <p class="mt-2">About</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">More Links</p>
+                            <p class="mt-2">Home</p>
+                            <p class="mt-2">Roadmap</p>
+                            <p class="mt-2">Docs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,27 @@
+<div class="border-b-2 border-gray-500 mt-2 mb-2 flex justify-between mx-10">
+    <!-- job details  -->
+    <div class="margin">
+        <!-- title  -->
+        <em class="text-teal-600 mb-2">
+            {{job['title']}}
+        </em>
+        <!-- location  -->
+        <div>
+            <b class="text-gray-500 ">Location:</b>
+            {{job['location']}}
+        </div>
+        <!-- salary  -->
+        {% if 'salary' in job %}
+        <div>
+            <b class="text-gray-500 ">Salary:</b>
+            {{job['salary']}}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- buttons -->
+    <div>
+        <button class="bg-teal-800 px-6 py-2 text-gray-50 hover:bg-black hover:text-white rounded-md">Apply</button>
+    </div>
+
+</div>

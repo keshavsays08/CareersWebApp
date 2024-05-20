@@ -15,6 +15,8 @@
 
 <body class="bg-slate-200">
     <div>
+        <!-- navbar  -->
+        {% include 'navbar.html' %}
         <!-- hero banner -->
         <div class="bg-gradient-to-tr from-teal-600 to-slate-400 h-50 w-full bg-cover bg-center relative">
             <img src="../static/annie-spratt-QckxruozjRg-unsplash.jpg" alt="banner"
@@ -78,14 +80,14 @@
                             <p class="font-bold">Support</p>
                             <p class="mt-2">Terms of service</p>
                             <p class="mt-2 mb-2">Privacy policy</p>
-                            <a class="mt-2" href="mailto:hello@datalogify.com"><i
+                            <a class="mt-2" href="mailto:hello@datalogify.com?subject=Query%20Regarding%20Job%20Opening%20&body=My%20Name%3A%20%3CYour%20Name%20Here%3E%0D%0AMy%20Question%3A%20%3CEnter%20Your%20Question%3E"><i
                                     class="fa-solid fa-envelope hover:text-teal-600 mx-1"></i> hello@datalogify.com</a>
                         </div>
                         <div>
                             <p class="font-bold">Company</p>
-                            <p class="mt-2">Blogs</p>
-                            <p class="mt-2">Contact</p>
-                            <p class="mt-2">About</p>
+                            <p class="mt-2 cursor-pointer ">Blogs</p>
+                            <a class="mt-2 cursor-pointer" href="mailto:hello@datalogify.com?subject=Query%20Regarding%20Job%20Opening%20&body=My%20Name%3A%20%3CYour%20Name%20Here%3E%0D%0AMy%20Question%3A%20%3CEnter%20Your%20Question%3E">Contact</a>
+                            <p class="mt-2 cursor-pointer ">About</p>
                         </div>
                         <div>
                             <p class="font-bold">More Links</p>
